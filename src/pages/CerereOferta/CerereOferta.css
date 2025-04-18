@@ -1,0 +1,60 @@
+.cerere-oferta{
+    padding-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    background-color:rgba(238,238,238,255);
+    
+}
+
+.cerere-form{
+    width: 60%;
+}
+
+
+@media(max-width:1100px) {
+    .cerere-oferta{
+        padding-top: 11rem;
+    
+    }
+
+    .cerere-form{
+        width: 80%;
+    }
+}
+
+
+@media(max-width:900px) {
+    .cerere-oferta{
+        padding-top: 9rem;
+    
+    }
+
+   
+}
+
+@media(max-width:700px) {
+    .cerere-form{
+        width: 90%;
+    }
+   
+}
+
+
+@media(max-width:550px) {
+
+    .cerere-oferta{
+        padding-top: 7.5rem;
+    padding-bottom: 2rem;}
+    .cerere-form{
+        width: 95%;
+    }
+
+    .cerere-title{
+        font-size: 0.7rem;
+    }
+   
+}

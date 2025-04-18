@@ -1,0 +1,223 @@
+.form-oferta{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 1rem 5rem;
+}
+
+.form-label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  gap: 2px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-label label{
+    font-size: 1.2rem;
+}
+
+.form-label input {
+    width: 100%;
+  
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-label textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.form-label-fisier{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.form-label-fisier label{
+    font-size: 1.2rem;
+}
+
+.form-oferta-btn{
+    width: 100%;
+    max-width: 12rem;
+    height: 100%;
+    padding: 1rem 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--color-nav);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.form-oferta-btn:hover{
+    color: orange;
+  }
+
+
+.form-success {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #4CAF50;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+    animation: fadeIn 0.5s ease;
+  
+  }
+  
+  .form-error {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #f44336;
+    background-color: #ffebee;
+    color: #c62828;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);
+    animation: fadeIn 0.5s ease;
+   
+  }
+
+  .spinner {
+    margin: 10px auto;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #2e7d32;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  @media(max-width:600px) {
+  .form-oferta{
+    gap: 15px;
+    padding: 1rem 2rem;
+}
+
+
+.form-label label{
+    font-size: 1rem;
+}
+
+.form-label input {
+    font-size: 0.8rem; 
+    padding: 8px;
+}
+
+.form-label textarea{
+    font-size: 0.8rem;
+    padding: 8px;
+}
+
+.form-label-fisier{
+  
+    gap: 5px;
+}
+
+.form-label-fisier label{
+    font-size: 1rem;
+}
+
+.form-oferta-btn{
+    width: 100%;
+    max-width: 9rem;
+    height: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--color-nav);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+
+
+.form-success {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #4CAF50;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+    animation: fadeIn 0.5s ease;
+  
+  }
+  
+  .form-error {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #f44336;
+    background-color: #ffebee;
+    color: #c62828;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);
+    animation: fadeIn 0.5s ease;
+   
+  }
+
+  .spinner {
+    margin: 10px auto;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #2e7d32;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+   
+}
+
+@media(max-width:500px){
+    .form-label-fisier{
+  
+        gap: 5px;
+    }
+    
+    .form-label-fisier label{
+        font-size: 1rem;
+    }
+    .form-label-fisier input{
+        font-size: 0.6rem;
+    }
+}

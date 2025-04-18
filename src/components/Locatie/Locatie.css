@@ -1,0 +1,165 @@
+.location{
+    padding: 5% 10% 5% 10%; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: -moz-linear-gradient(180deg, #FFFFFF 19%, #CBCBCB 87%, #F2F2F2 100%, #00BCD4 100%); 
+
+    background: -webkit-linear-gradient(180deg, #FFFFFF 19%, #CBCBCB 87%, #F2F2F2 100%, #00BCD4 100%);
+
+    background: -o-linear-gradient(180deg, #FFFFFF 19%, #CBCBCB 87%, #F2F2F2 100%, #00BCD4 100%);
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00BCD4', endColorstr='#FFFFFF', GradientType=1 );
+
+    background: -ms-linear-gradient(180deg, #FFFFFF 19%, #CBCBCB 87%, #F2F2F2 100%, #00BCD4 100%);
+
+    background: linear-gradient(180deg, #FFFFFF 19%, #CBCBCB 87%, #F2F2F2 100%, #00BCD4 100%);
+
+}
+
+.location-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.location-title>:nth-child(1){
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: var(--shadow-text);
+}
+
+.location-title>:nth-child(2){
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: var(--shadow-text);
+}
+
+
+.location-street{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.street{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-shadow: var(--shadow-text);
+}
+
+.street:hover{
+    color: var(--color-green);
+}
+
+.phone{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    cursor: pointer;
+    text-shadow: var(--shadow-text);
+}
+
+.phone:hover{
+    color: var(--color-green);
+}
+
+.location-map{
+    overflow: hidden;
+    padding-bottom: 30%;
+    position: relative;
+    height: 0;
+    filter: var(--shadow-img);
+}
+
+.location-map iframe{
+    left: 0;
+    top: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+
+@media(max-width:1050px){
+    .location{
+        padding: 8% 5% 5% 5%; 
+    }
+
+    .street{
+        font-size: 1.4rem;
+    }
+
+    .phone{
+        font-size: 1.4rem;
+    }
+        
+}
+
+@media(max-width:800px){
+    .location{
+        padding: 12% 5% 12% 5%; 
+    }
+    .street{
+        font-size: 1.3rem;
+    }
+
+    .phone{
+        font-size: 1.3rem;
+    }
+    .location-map{
+      
+        padding-bottom: 40%;
+       
+    }
+       
+}
+
+@media(max-width:500px){
+    .location{
+        padding: 15% 5% 15% 5%; 
+    }
+
+       
+.location-title>:nth-child(1){
+    font-size: 1.6rem;
+}
+
+.location-title>:nth-child(2){
+    font-size: 1rem;
+}
+
+    .location-street{
+        top: -1rem;
+    }
+    .street{
+        font-size: 1.1rem;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .phone{
+        font-size: 1.1rem;
+        gap: 10px;
+    }
+    .location-map{
+      
+        padding-bottom: 50%;
+       
+    }
+       
+}
