@@ -1,0 +1,89 @@
+.banner-oferta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 3rem;
+    padding: 1.4rem 3rem;
+    background: var(--color-nav);
+    margin-top: 3rem;
+
+}
+
+.banner-oferta-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: #fff;
+}
+
+.banner-oferta-title>:nth-child(1){
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    
+}
+
+.banner-oferta-title>:nth-child(2){
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+ 
+}
+
+.banner-oferta-btn{
+    width: 100%;
+    max-width: 12rem;
+    height: 100%;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.banner-oferta-btn:hover{ 
+    color: orange;
+}
+
+
+@media(max-width:860px) {
+    .banner-oferta{
+        padding: 1.4rem 1rem;
+    }
+}
+
+@media(max-width:510px) {
+    .banner-oferta{
+        margin-top: 1.5rem;
+    }
+
+    .banner-oferta-title{
+        gap: 0.7rem;
+    }
+
+    .banner-oferta-title>:nth-child(1){
+        font-size: 1.6rem;
+    }
+    
+    .banner-oferta-title>:nth-child(2){
+        font-size: 1rem;
+    }
+    
+    .banner-oferta-btn{
+        padding: 0.4rem 1.2rem;
+        font-size: 1rem;   
+    }
+    
+
+}

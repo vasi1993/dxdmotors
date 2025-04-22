@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Categorii from "./pages/Categorii/Categorii";
 import Products from "./pages/Products/Products";
 import CerereOferta from "./pages/CerereOferta/CerereOferta";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   React.useEffect(() => {
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categoriipiese" element={<Categorii />} />
