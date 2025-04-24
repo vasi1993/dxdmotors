@@ -1,6 +1,10 @@
 import anvelope1 from '../assets/produse/anvelope1.png'
 import anvelope2 from '../assets/produse/anvelope2.png'
 import anvelope3 from '../assets/produse/anvelope3.png'
+import motor1 from '../assets/produse/motor1.png'
+import motor2 from '../assets/produse/motor2.png'
+import motor3 from '../assets/produse/motor3.png'
+
 
 
 let products = [
@@ -33,6 +37,9 @@ let products = [
    {
     categorii: "piesemotor",
     id:6,
+    img1:motor1,
+    img2:motor2,
+    img3:motor3,
    },
    {
     categorii: "caroserie",
