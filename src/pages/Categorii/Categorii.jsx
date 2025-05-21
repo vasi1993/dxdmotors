@@ -5,17 +5,24 @@ import CardPiese from "../../components/CardPiese/CardPiese";
 
 const Categorii = () => {
   return (
-    <div className="categorii">
-      <div className="categorii-title">
+    <main
+      className="categorii"
+      role="main"
+      aria-label="Categorii piese auto DxD Motors"
+    >
+      <header className="categorii-title">
         <span data-aos="zoom-out" data-aos-duration="500" data-aos-once="true">
           DxD Motors
         </span>
         <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
           Categorii ce le puteți găsi la noi în magazin
         </span>{" "}
-      </div>
+      </header>
 
-      <div className="categorii-carduri">
+      <section
+        className="categorii-carduri"
+        aria-label="Lista categorii piese auto"
+      >
         {categoriData.map((data) => {
           return (
             <CardPiese
@@ -28,8 +35,8 @@ const Categorii = () => {
             />
           );
         })}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

@@ -10,21 +10,30 @@ import productDesc from "../../data/productDesc";
 const Products = () => {
   const { productsCategorii } = useParams();
   const product = products.filter((p) => p.categorii === productsCategorii);
+  const title = productTitle.find(
+    (title) => title.categorii === productsCategorii
+  );
+  const desc = productDesc.find((p) => p.categorii === productsCategorii);
   return (
-    <div className="products">
-      <div className="products-title">
+    <main className="products" aria-labelledby="products-section-title">
+      <section className="products-title">
         {productTitle
           .filter((title) => title.categorii === productsCategorii)
-          .map((t) => (
-            <h1>{t.title}</h1>
+          .map((t, idx) => (
+            <h1 key={idx} id="products-section-title">
+              {t.title}
+            </h1>
           ))}
-      </div>
+      </section>
 
-      <div className="products-carusel">
-        {product.map((produs) => {
+      <section
+        className="products-carusel"
+        aria-label={`${title?.title} produse`}
+      >
+        {product.map((produs, idx) => {
           return (
             <ProductDisplay
-              key={produs.id}
+              key={idx}
               id={produs.id}
               img1={produs.img1}
               img2={produs.img2}
@@ -32,13 +41,19 @@ const Products = () => {
             />
           );
         })}
-      </div>
-      <div className="products-desc">
+      </section>
+      <section
+        className="products-desc"
+        aria-label={`${title?.title} descriere`}
+      >
         {productDesc
           .filter((p) => p.categorii === productsCategorii)
           .map((item) => (
             <div className="products-desc-container">
-              <div className="products-desc-li">
+              <div
+                className="products-desc-li"
+                aria-label="Beneficii și informații"
+              >
                 <p>{item.desc1}</p>
                 <p>{item.desc2}</p>
                 <p>{item.desc3}</p>
@@ -47,12 +62,17 @@ const Products = () => {
                 <p>{item.desc6}</p>
               </div>
               <button className="product-desc-button">
-                <a href="tel:(+)40756452917">{item.button}</a>
+                <a
+                  href="tel:(+)40756452917"
+                  aria-label={`Sună la DXD Motors pentru ofertă la ${title?.title}`}
+                >
+                  {item.button}
+                </a>
               </button>
             </div>
           ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

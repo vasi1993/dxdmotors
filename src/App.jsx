@@ -25,14 +25,16 @@ const App = () => {
     <div>
       <Navbar />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/categoriipiese" element={<Categorii />} />
-        <Route path="/products" element={<Products />}>
-          <Route path=":productsCategorii" element={<Products />} />
-        </Route>
-        <Route path="/cerere" element={<CerereOferta />} />
-      </Routes>
+      <main role="main" id="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/categoriipiese" element={<Categorii />} />
+          <Route path="/products" element={<Products />}>
+            <Route path=":productsCategorii" element={<Products />} />
+          </Route>
+          <Route path="/cerere" element={<CerereOferta />} />
+        </Routes>
+      </main>
 
       <Footer />
     </div>

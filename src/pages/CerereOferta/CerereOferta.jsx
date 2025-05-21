@@ -4,14 +4,18 @@ import FormOferta from "../../components/FormOferta/FormOferta";
 
 const CerereOferta = () => {
   return (
-    <div className="cerere-oferta">
-      <div className="cerere-title">
+    <main
+      className="cerere-oferta"
+      role="main"
+      aria-label="Formular cerere ofertă piese auto"
+    >
+      <header className="cerere-title">
         <h1>Cerere Ofertă</h1>
-      </div>
-      <div className="cerere-form">
+      </header>
+      <section className="cerere-form">
         <FormOferta />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

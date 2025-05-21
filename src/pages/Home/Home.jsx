@@ -6,12 +6,20 @@ import "./Home.css";
 import BadgeOferta from "../../components/BadgeOferta/BadgeOferta";
 const Home = () => {
   return (
-    <div className="home">
+    <main
+      className="home"
+      role="main"
+      aria-label="Pagina principală DXD Motors"
+    >
       <Header />
       <CategoriiPiese />
-      <BadgeOferta />
-      <Locatie />
-    </div>
+      <BadgeOferta
+        aria-live="polite"
+        role="region"
+        aria-label="Ofertă specială"
+      />
+      <Locatie aria-label="Locația magazinului DXD Motors" />
+    </main>
   );
 };
 
