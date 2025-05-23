@@ -16,16 +16,6 @@ const Products = () => {
   const desc = productDesc.find((p) => p.categorii === productsCategorii);
   return (
     <main className="products" aria-labelledby="products-section-title">
-      <section className="products-title">
-        {productTitle
-          .filter((title) => title.categorii === productsCategorii)
-          .map((t, idx) => (
-            <h1 key={idx} id="products-section-title">
-              {t.title}
-            </h1>
-          ))}
-      </section>
-
       <section
         className="products-carusel"
         aria-label={`${title?.title} produse`}
@@ -42,6 +32,17 @@ const Products = () => {
           );
         })}
       </section>
+
+      <section className="products-title">
+        {productTitle
+          .filter((title) => title.categorii === productsCategorii)
+          .map((t, idx) => (
+            <h1 key={idx} id="products-section-title">
+              {t.title}
+            </h1>
+          ))}
+      </section>
+
       <section
         className="products-desc"
         aria-label={`${title?.title} descriere`}

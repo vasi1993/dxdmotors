@@ -17,7 +17,7 @@ import { GiAutoRepair } from "react-icons/gi";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GoQuestion } from "react-icons/go";
 import { TbBatteryAutomotiveFilled } from "react-icons/tb";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,32 +39,33 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div ref={navRef} className="navbar">
+    <nav ref={navRef} className="navbar" aria-label="Navigație principală">
       {/* first menu */}
       <div className="first-nav">
         <div className="first-nav-left">
-          {menuOpen ? (
-            <div onClick={() => setMenuOpen((prev) => !prev)}>
+          <div
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label="Deschide/Închide meniu"
+          >
+            {menuOpen ? (
               <AiOutlineMenuFold size={25} className="nav-mobil-icon" />
-            </div>
-          ) : (
-            <div onClick={() => setMenuOpen((prev) => !prev)}>
+            ) : (
               <AiOutlineMenuUnfold size={25} className="nav-mobil-icon" />
-            </div>
-          )}
+            )}
+          </div>
           <div className="nav-logo">
             <Link to="/">
-              <img src={Logoimg} alt="" />
+              <img src={Logoimg} alt="Sigla DxD Motors" />
             </Link>
           </div>
         </div>
-        <div className="nav-search">
-          <input type="text" placeholder="Cautare" />
-          <IoIosSearch className="search-icon" />
+        <div className="nav-search" role="search" aria-label="Căutare piese">
+          <input type="text" placeholder="Căutare" aria-label="Căutare" />
+          <IoIosSearch className="search-icon" aria-label="Buton căutare" />
         </div>
         <div className="nav-contact">
           <div className="nav-phone">
-            <img src={whatsupicon} alt="whatup" />
+            <img src={whatsupicon} alt="Icon WhatsApp" />
             <a href="tel:(+)40756452917">0756452917</a>
           </div>
           <div className="nav-email">
@@ -118,7 +119,11 @@ const Navbar = () => {
       </div>
 
       {/* mobile navbar */}
-      <div className="nav-mobile" style={getMenuStyles(menuOpen)}>
+      <div
+        className="nav-mobile"
+        style={getMenuStyles(menuOpen)}
+        aria-label="Meniu mobil"
+      >
         <div className="nav-mobile-link">
           <MdPhoneForwarded className="mobile-icon" />
           <a href="tel:(+)40756452917">Informații telefonic</a>
@@ -127,13 +132,16 @@ const Navbar = () => {
           <MdEmail className="mobile-icon" />
           <a href="mailto:dxdmotors@gmail.com">Contact</a>
         </div>
-        <div className="nav-mobile-link">
+        <div
+          className="nav-mobile-link"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
           {" "}
           <GoQuestion className="mobile-icon" />
           <Link to="/cerere"> Întrebari</Link>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

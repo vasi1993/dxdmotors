@@ -47,9 +47,10 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-container">
-        <div className="header-left-store">
+        <section className="header-left-store" aria-labelledby="dxd-title">
           <div className="store">
             <h1
+              id="dxd-title"
               className="header-title"
               data-aos="zoom-out"
               data-aos-duration="500"
@@ -77,12 +78,16 @@ const Header = () => {
             </button>
           </div>
           <div className="store-img" data-aos="zoom-in" data-aos-once="true">
-            <img src={storeimg} alt="" />
+            <img src={storeimg} alt="Imagine magazin piese auto DxD Motors" />
           </div>
-        </div>
+        </section>
 
         <div className="header-right">
-          <div className="header-right-service header-right-color1">
+          <section
+            role="region"
+            aria-label="Servicii climatizare auto"
+            className="header-right-service header-right-color1"
+          >
             <div className="service">
               <h1
                 className="service-title"
@@ -103,15 +108,25 @@ const Header = () => {
                 <a href="tel:(+)40756452917">Programează</a>
               </button>
             </div>
+
             <div
               className="service-img"
               data-aos="zoom-in"
               data-aos-once="true"
             >
-              <img src={climaimg} alt="" width={300} />
+              <img
+                src={climaimg}
+                alt="Serviciu încărcare climă auto"
+                width={300}
+              />
             </div>
-          </div>
-          <div className="header-right-service header-right-color2">
+          </section>
+
+          <section
+            role="region"
+            aria-label="Servicii mentenanta auto"
+            className="header-right-service header-right-color2"
+          >
             <div className="service">
               <h1 className="service-title">Mentenanță auto</h1>
 
@@ -132,9 +147,13 @@ const Header = () => {
               data-aos="zoom-in"
               data-aos-once="true"
             >
-              <img src={serviceimg} alt="" width={300} />
+              <img
+                src={serviceimg}
+                alt="Mentenanță și reparații auto în atelier"
+                width={300}
+              />
             </div>
-          </div>
+          </section>
         </div>
       </div>
 

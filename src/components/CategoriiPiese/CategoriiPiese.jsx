@@ -6,9 +6,14 @@ import CardPiese from "../CardPiese/CardPiese";
 
 const CategoriiPiese = () => {
   return (
-    <div className="categori">
+    <section className="categori" aria-labelledby="categori-title">
       <div className="categori-title">
-        <span data-aos="zoom-out" data-aos-duration="500" data-aos-once="true">
+        <span
+          data-aos="zoom-out"
+          data-aos-duration="500"
+          data-aos-once="true"
+          id="categori-title"
+        >
           DxD Motors
         </span>
         <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
@@ -16,9 +21,9 @@ const CategoriiPiese = () => {
         </span>{" "}
       </div>
 
-      <div className="categori-carduri">
-        {categoriData.map((data) => {
-          return (
+      <div className="categori-carduri" aria-label="Categorii de piese auto">
+        {categoriData && categoriData.length > 0 ? (
+          categoriData.map((data) => (
             <CardPiese
               img={data.img}
               title={data.title}
@@ -27,10 +32,12 @@ const CategoriiPiese = () => {
               aosDelay={data.aosDelay}
               categori={data.categori}
             />
-          );
-        })}
+          ))
+        ) : (
+          <p>Nu sunt categorii disponibile momentan.</p>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 

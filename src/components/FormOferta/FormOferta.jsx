@@ -41,31 +41,39 @@ const FormOferta = () => {
 
   return (
     <>
-      {successMessage && <div className="form-success">{successMessage}</div>}
-      {errorMessage && <div className="form-error">{errorMessage}</div>}
+      {successMessage && (
+        <div className="form-success" role="alert">
+          {successMessage}
+        </div>
+      )}
+      {errorMessage && (
+        <div className="form-error" role="alert">
+          {errorMessage}
+        </div>
+      )}
       <form className="form-oferta" onSubmit={sendEmail}>
         <div className="form-label">
-          <label htmlFor="">Numele tău</label>
+          <label htmlFor="numele">Numele tău</label>
           <input type="text" id="numele" name="nume" required />
         </div>
 
         <div className="form-label">
-          <label htmlFor="">Adresa ta de email</label>
-          <input type="email" id="email" name="email" />
+          <label htmlFor="email">Adresa ta de email</label>
+          <input type="email" id="email" name="email" required />
         </div>
 
         <div className="form-label">
-          <label htmlFor="">Serie Șasiu</label>
+          <label htmlFor="serie">Serie Șasiu</label>
           <input type="text" id="serie" name="serie" required />
         </div>
 
         <div className="form-label">
-          <label htmlFor="">Marcă, Model Auto și Anul de fabricare</label>
+          <label htmlFor="marca">Marcă, Model Auto și Anul de fabricare</label>
           <input type="text" id="marca" name="marca" required />
         </div>
 
         <div className="form-label">
-          <label htmlFor="">Ce piese ai nevoie?</label>
+          <label htmlFor="content">Ce piese ai nevoie?</label>
           <textarea id="content" name="piese" required rows={5}></textarea>
         </div>
 
@@ -80,8 +88,7 @@ const FormOferta = () => {
           />
         </div>
 
-        <button type="submit" className="form-oferta-btn">
-          {" "}
+        <button type="submit" className="form-oferta-btn" disabled={isLoading}>
           {isLoading ? "Se trimite..." : "Trimite"}
         </button>
       </form>

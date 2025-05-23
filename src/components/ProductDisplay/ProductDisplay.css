@@ -1,6 +1,7 @@
 .carousel-wrapper {
-    width: 80%;
-    margin: 40px auto;
+    width: 75%;
+    
+    margin: auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow:
@@ -30,7 +31,7 @@ height: 100%;
 .carousel .slide img {
     max-height:100%;
     max-width: 100%;
-    object-fit: contain;   /* sau `cover`, în funcție de efectul dorit */
+    object-fit: cover;   /* sau `cover`, în funcție de efectul dorit */
     display: block;
     
   }
@@ -51,6 +52,16 @@ height: 100%;
     color: #000;
     font-weight: bold;
   }
+
+  .visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
   
   @media (max-width:700px){
     .carousel-wrapper{

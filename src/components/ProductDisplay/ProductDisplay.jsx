@@ -5,7 +5,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ProductDisplay = ({ id, img1, img2, img3 }) => {
   return (
-    <div className="carousel-wrapper">
+    <div
+      className="carousel-wrapper"
+      role="region"
+      aria-label={`Galerie imagini pentru produsul #${id}`}
+    >
       <Carousel
         showThumbs={false}
         autoPlay
@@ -19,15 +23,21 @@ const ProductDisplay = ({ id, img1, img2, img3 }) => {
         swipeable={true} // 👈 activează swipe pe mobil
       >
         <div>
-          <img src={img1} alt="1" />
+          <img src={img1} alt={`Imagine 1 cu produsul #${id}`} loading="lazy" />
         </div>
         <div>
-          <img src={img2} alt="2" />
+          <img src={img2} alt={`Imagine 2 cu produsul #${id}`} loading="lazy" />
         </div>
         <div>
-          <img src={img3} alt="3" />
+          <img src={img3} alt={`Imagine 3 cu produsul #${id}`} loading="lazy" />
         </div>
       </Carousel>
+      <div id="skip-carousel" tabIndex="-1">
+        {" "}
+        <a href="#skip-carousel" className="visually-hidden">
+          Sari peste galeria produsului
+        </a>
+      </div>
     </div>
   );
 };

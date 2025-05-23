@@ -10,6 +10,12 @@ import frana3 from "../assets/produse/frana3.png";
 import suspensie1 from "../assets/produse/suspensie1.png";
 import suspensie2 from "../assets/produse/suspensie2.png";
 import suspensie3 from "../assets/produse/suspensie3.png";
+import filtre1 from "../assets/produse/filtre1.png";
+import filtre2 from "../assets/produse/filtre2.png";
+import filtre3 from "../assets/produse/filtre3.png";
+import directie1 from "../assets/produse/directie1.png";
+import directie2 from "../assets/produse/directie2.png";
+import directie3 from "../assets/produse/directie3.png";
 
 let products = [
   {
@@ -36,10 +42,16 @@ let products = [
   {
     categorii: "directie",
     id: 4,
+    img1: directie1,
+    img2: directie2,
+    img3: directie3,
   },
   {
     categorii: "filtre",
     id: 5,
+    img1: filtre1,
+    img2: filtre2,
+    img3: filtre3,
   },
   {
     categorii: "piesemotor",

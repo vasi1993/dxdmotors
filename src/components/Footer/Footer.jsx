@@ -11,11 +11,15 @@ import logoImg from "../../assets/logo6.png";
 
 const Footer = () => {
   return (
-    <div className="footer-main">
+    <footer
+      className="footer-main"
+      role="contentinfo"
+      aria-label="Informații despre site-ul DxD Motors"
+    >
       <div className="footer">
         <div className="footer-logo">
           <div className="footer-logo-img">
-            <img src={logoImg} alt="" />
+            <img src={logoImg} alt="Logo DxD Motors" />
           </div>
 
           <p className="footer-logo-description">
@@ -27,14 +31,26 @@ const Footer = () => {
 
         <div className="footer-social">
           <div className="footer-social-icons">
-            <a href="" className="footer-social-icon">
-              <img src={facebook_icon} alt="facebook-icon" />
+            <a
+              href="https://www.facebook.com/profile.php?id=61572600716737"
+              className="footer-social-icon"
+              aria-label="Facebook DxD Motors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={facebook_icon} alt="Pagina noastră de Facebook" />
             </a>
-            <a href="" className="footer-social-icon">
-              <img src={instagram_icon} alt="instagram-icon" />
+            <a
+              href="#"
+              className="footer-social-icon"
+              aria-label="Instagram DxD Motors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={instagram_icon} alt="Profilul nostru de Instagram" />
             </a>
             <a href="mailto:dxdmotors@gmail.com" className="footer-social-icon">
-              <img src={gmail_icon} alt="instagram-icon" />
+              <img src={gmail_icon} alt="Trimite-ne un email" />
             </a>
           </div>
 
@@ -43,13 +59,19 @@ const Footer = () => {
               href="https://anpc.ro/ce-este-sal/"
               className="footer-social-anpc-icon"
             >
-              <img src={anpc_sal_image} alt="" />
+              <img
+                src={anpc_sal_image}
+                alt="Soluționare Alternativă a Litigiilor - ANPC SAL"
+              />
             </a>
             <a
               href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO"
               className="footer-social-anpc-icon"
             >
-              <img src={anpc_sol_image} alt="" />
+              <img
+                src={anpc_sol_image}
+                alt="Soluționare Online a Litigiilor - ANPC SOL"
+              />
             </a>
           </div>
         </div>
@@ -63,7 +85,12 @@ const Footer = () => {
           <div className="footer-location-phone">
             <BsFillTelephoneFill />
             <p>
-              <a href="tel:(+)40364566544">Telefon - 0756452917</a>
+              <a
+                href="tel:(+)40364566544"
+                aria-label="Sună DxD Motors la 0756 452 917"
+              >
+                Telefon - 0756452917
+              </a>
             </p>
           </div>
           <div className="footer-location-program">
@@ -95,9 +122,12 @@ const Footer = () => {
 
       <div className="footer-copyright">
         <hr />
-        <p>@vasy. Toate drepturile sunt rezervate</p>
+        <p>
+          &copy; {new Date().getFullYear()} vasy. Toate drepturile sunt
+          rezervate.
+        </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

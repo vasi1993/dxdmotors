@@ -5,7 +5,7 @@ import { ImLocation } from "react-icons/im";
 
 const Locatie = () => {
   return (
-    <div className="location" id="location">
+    <section className="location" id="location" aria-label="Locația DxD Motors">
       <div
         className="location-title"
         data-aos="zoom-out"
@@ -44,10 +44,10 @@ const Locatie = () => {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Responsive Google Maps"
+          title="Hartă Google Maps DxD Motors"
         ></iframe>
       </div>
-    </div>
+    </section>
   );
 };
 
