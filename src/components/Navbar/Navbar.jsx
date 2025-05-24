@@ -55,7 +55,11 @@ const Navbar = () => {
           </div>
           <div className="nav-logo">
             <Link to="/">
-              <img src={Logoimg} alt="Sigla DxD Motors" />
+              <img
+                src={Logoimg}
+                alt="Sigla DxD Motors"
+                onClick={() => setMenuOpen(false)}
+              />
             </Link>
           </div>
         </div>

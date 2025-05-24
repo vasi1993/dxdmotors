@@ -16,6 +16,22 @@ import filtre3 from "../assets/produse/filtre3.png";
 import directie1 from "../assets/produse/directie1.png";
 import directie2 from "../assets/produse/directie2.png";
 import directie3 from "../assets/produse/directie3.png";
+import caroserie1 from "../assets/produse/caroserie1.png";
+import caroserie2 from "../assets/produse/caroserie2.png";
+import caroserie3 from "../assets/produse/caroserie3.png";
+import cutieviteze1 from "../assets/produse/cutieviteze1.png";
+import cutieviteze2 from "../assets/produse/cutieviteze2.png";
+import cutieviteze3 from "../assets/produse/cutieviteze3.png";
+import ulei1 from "../assets/produse/ulei1.png";
+import ulei2 from "../assets/produse/ulei2.png";
+import ulei3 from "../assets/produse/ulei3.png";
+import esapament1 from "../assets/produse/esapament1.png";
+import esapament2 from "../assets/produse/esapament2.png";
+import esapament3 from "../assets/produse/esapament3.png";
+import curele1 from "../assets/produse/curele1.png";
+import curele2 from "../assets/produse/curele2.png";
+import curele3 from "../assets/produse/curele3.png";
+import altele1 from "../assets/produse/altele1.png";
 
 let products = [
   {
@@ -63,26 +79,44 @@ let products = [
   {
     categorii: "caroserie",
     id: 7,
+    img1: caroserie1,
+    img2: caroserie2,
+    img3: caroserie3,
   },
   {
     categorii: "cutieviteze",
     id: 8,
+    img1: cutieviteze1,
+    img2: cutieviteze2,
+    img3: cutieviteze3,
   },
   {
     categorii: "uleiuri",
     id: 9,
+    img1: ulei1,
+    img2: ulei2,
+    img3: ulei3,
   },
   {
     categorii: "esapament",
     id: 10,
+    img1: esapament1,
+    img2: esapament2,
+    img3: esapament3,
   },
   {
     categorii: "curele",
     id: 11,
+    img1: curele1,
+    img2: curele2,
+    img3: curele3,
   },
   {
     categorii: "altele",
     id: 12,
+    img1: altele1,
+    img2: frana2,
+    img3: suspensie3,
   },
 ];
 
